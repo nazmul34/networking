@@ -1,0 +1,84 @@
+https://www.homenethowto.com/basics/introduction-home-networks/
+WAN:
+The outside is the Internet connection, which connects to a port on the router which is often called the WAN port.
+means Wide Area Network, or a network connection that stretches out over a wider geographical area, such as an 
+internet connection between a home and the Internet Service Provider (ISP)
+
+LAN:
+The inside is the local network or LAN. A router often has multiple ports that belong to the inside where you can 
+connect different home computers, printers and other devices.
+stands for Local Area Network, a network with limited coverage area, such as a network within a home or a single
+company, often with a single owner for the whole LAN network.
+
+
+These are the main components of a Home Router:
+
+1.An integrated Switch with a number of LAN ports where you can connect computers and other devices using network cables
+2.An Access Point with one or more antennas to which wireless devices can connect
+3.Often there is a built-in modem, at least if the Home Router is meant to be connected to Cable or 
+  DSL-based Internet connections. The WAN port of the router is then connected to the integrated modem.
+4.The actual Router function which forwards traffic between the inside and outside networks.
+
+network traffic doesn’t actually always have to pass through the built-in Router function.Traffic only has to be 
+handled by the internal Router if the traffic is either going to the Internet or if the computers are requesting 
+data from one of the Services that are running on the Home Router.
+
+---------------------------------------------------------------------------------------------------------------------
+https://www.homenethowto.com/basics/routing-introduction-to-ip-addresses/
+#
+IP addresses are the type of addresses that computers use to send data traffic between each other. 
+The IP addresses can be compared somewhat to street addresses in real life.
+
+A home router that is sending out traffic to the Internet doesn’t have to know exactly where www.homenethowto.com is
+located. All it needs to know is that the general direction it needs to send the traffic towards is the outside 
+Internet connection, because that is where all networks except for the inside LAN network are located.
+Then the task of sending the traffic towards the destination is delegated to the ISP router that the home router is 
+connected to. The ISP router will also look at the traffic without knowing exactly where the destination is. 
+But it will have more detailed knowledge than the home router and will also have more possible routes to choose from.
+
+In this way computer traffic is sent or routed over the Internet closer and closer to its destination via various 
+ISPs’ routers. The closer to the destination that the traffic gets, the more detailed knowledge of the destination 
+the routers will have. Eventually the traffic will end up at a router that has a direct connection to the 
+destination, which could be a web server or similar. That last router in the chain will then deliver the traffic to
+the web server.
+ 
+---------------------------------------------------------------------------------------------------------------------
+https://www.homenethowto.com/basics/ip-addresses/
+https://www.youtube.com/watch?v=hb2yTNT2rBU
+
+an IP address consists of two main parts: IP network and addresses within the IP network. 
+The addresses within the IP network are also called the host addresses because different hosts or computers have
+different unique addresses within the IP network.
+#1
+The IP network corresponds to more general parts of a full street address, such as City, Postal Code and Street name.
+#2
+The Host Addresses within the IP network correspond to specific house numbers on a street.
+
+#
+So how do you know if two IP addresses are on the same IP network or on two different IP networks? 
+The answer is within something called a Subnet Mask. An IP address is always combined with a Subnet Mask,
+and it is the Subnet Mask that determines which part of the IP address that belongs to the IP network and which 
+part that belongs to host addresses.
+
+The next computer below belongs to the IP network 211.139.157.0. It is using the host address 9 on the IP network,
+and its IP address is 211.139.157.9
+
+---------------------------------------------------------------------------------------------------------------------
+https://www.homenethowto.com/basics/default-gateway-finding-other-ip-networks/
+
+A computer that has an IP address and a Subnet Mask can talk directly with other computers that share the same 
+Subnet Mask and have IP addresses within the same IP network.
+But what about a computer that wants to talk with something that has an IP address on another IP network?
+ans: default gateway
+
+To find its local router the computer needs a so-called Default Gateway, sometimes simply called a Gateway.
+A Default Gateway is always a router that can connect to more than one IP network and can route traffic between 
+those IP networks. The router will have its own IP address on each IP network that it connects to.
+
+A computer can only talk with other IP addresses within its own IP network. So for the computer to be able to 
+communicate via a router, at least one of the router’s IP addresses must belong to the same IP network as the computer.
+
+When the router hands out an IP address and a Subnet Mask to the computer it also sends out its own IP address to 
+the computer and tells the computer to use that address as its Default Gateway.
+
+
