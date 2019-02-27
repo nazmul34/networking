@@ -81,4 +81,28 @@ communicate via a router, at least one of the router’s IP addresses must belon
 When the router hands out an IP address and a Subnet Mask to the computer it also sends out its own IP address to 
 the computer and tells the computer to use that address as its Default Gateway.
 
+---------------------------------------------------------------------------------------------------------------------
+https://www.homenethowto.com/basics/dns-linking-names-with-ip-addresses/
 
+Domain Names to connect to things on the Internet, for example www.homenethowto.com or www.apple.com.
+The translation is made by DNS, which stands for Domain Name System, a system for translating back and forth 
+between IP addresses and DNS names or domain names. So DNS convert domain name such as www.google.com to ip address 
+for the computer.
+
+The DNS servers are owned by different companies and organisations, When you buy or lease an Internet connection 
+from an ISP they also always provide DNS as a service to you, and your home router will also automatically learn 
+about and use those DNS servers.
+
+A lot of home routers tell the computers on the LAN to send their DNS queries to the home router itself. The home 
+router will then either answer directly if it already knows the answer, or it will forward the query to a DNS 
+server on the Internet.
+There are also home routers that simply tell the computers on the LAN to send their DNS queries directly to the DNS 
+servers of the ISP. This works just as well. 
+
+
+---------------------------------------------------------------------------------------------------------------------
+https://www.homenethowto.com/basics/giving-the-computer-an-ip-address/
+
+With that in mind, it is only natural that the router also hands out IP addresses and other necessary information 
+to the computers on the network. This is done via DHCP, which stands for Dynamic Host Configuration Protocol. 
+In other words, it is a protocol to automatically hand out configuration to computers and other devices on the network.

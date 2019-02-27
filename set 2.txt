@@ -1,0 +1,55 @@
+https://www.homenethowto.com/ports-and-nat/public-and-private-ip-addresses/
+
+all IP addresses beginning with “192.168” which belong to a special category of IP addresses that are commonly called
+Private IP addresses. These Private IP addresses are reserved for local use within LAN networks.
+Two other such Private address spaces exist:->
+1. Any address beginning with “10.”
+2. All addresses beginning with “172.16” up to “172.31” for example 172.16 or 172.23 or 172.31
+
+As mentioned earlier, the above special addresses are called Private addresses. They cannot be used on the Internet, 
+they can only be used within local networks. If you try to use Private addresses on the Internet then your Internet 
+Service Provider will block your traffic automatically, sensing that the traffic is coming from a Private IP address.
+
+----------------------------------------------------------------------------------------------------------------------
+https://www.homenethowto.com/ports-and-nat/address-translation/
+
+When a computer wants to communicate it sends off a packet with data. The packet always has two IP addresses 
+inscribed in the envelope or header of the packet.
+
+Source Address, which is the IP address of the sender. This has to be entered into the packet so the receiver knows 
+where it should send its replies, like a “return address”
+
+Destination address, the IP address of the receiver that the packet is being sent to
+
+In a home network where a computer wants to talk to something on the Internet, the source address will be a Private 
+IP address on the LAN. The destination address of the packet will be a Public IP address of a server on the Internet.
+If that packet is sent to the Internet then the ISP will block and throw away the packet since it has a private IP 
+address as its source.
+To fix this problem the home router steps in and translates the source address from a private address to a public 
+IP address. The router itself has a public IP address on its outside WAN interface. It got that public IP address 
+from the ISP. The router will simply let every client on the inside LAN share that single public IP address.
+If several clients are operating at the same time on the LAN then it is both possible and likely that several 
+computers want to browse at the same time to the Internet. Then the home router will keep track of what traffic 
+that belongs to which computer. This lets the router know which inside LAN computer that the returning reply 
+traffic should be sent to.
+
+--------------------------------------------------------------------------------------------------------------------
+https://www.homenethowto.com/ports-and-nat/ports-addresses-for-programs/
+
+a single server can run multiple services or programs at the same time. For example, the server could run a Web 
+Service, a DNS Service, an FTP Service and many other services. All of those services could be running 
+simultaneously. And since they are running on a single server they also share the single IP address that the server 
+is configured with.
+
+So the server must have a way to know which service that each packet is meant for so that it can look at incoming 
+data traffic and hand over the traffic to the correct service.
+
+The solution that is used in network communication is something called Ports. These ports are used to give 
+addresses to different services.
+
+A computer can manage just fine with a single IP address, but it can listen on many ports simultaneously. Each 
+program that wants to be able to receive network connections and data packets will require its own unique port.
+
+The programs and services that you start on a computer will tell the OS (Windows, Mac OS X etc) which ports that 
+the service would like to listen to. The OS will then start listening for traffic to that port, and if any such 
+traffic arrives at the computer then the OS will forward that traffic to the correct program.
