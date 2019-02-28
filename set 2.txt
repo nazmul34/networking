@@ -53,3 +53,49 @@ program that wants to be able to receive network connections and data packets wi
 The programs and services that you start on a computer will tell the OS (Windows, Mac OS X etc) which ports that 
 the service would like to listen to. The OS will then start listening for traffic to that port, and if any such 
 traffic arrives at the computer then the OS will forward that traffic to the correct program.
+
+--------------------------------------------------------------------------------------------------------------------
+https://brainly.in/question/1370945#readmore
+
+The Hypertext Transfer Protocol (HTTP) is an application protocol for distributed, collaborative, and hypermedia 
+information systems.HTTP is the foundation of data communication for the World Wide Web. Hypertext is structured 
+text that uses logical links (hyperlinks) between nodes containing text.
+
+HTTP means HyperText Transfer Protocol. HTTP is the underlying protocol used by the World Wide Web and this protocol
+defines how messages are formatted and transmitted, and what actions Web servers and browsers should take in 
+response to various commands.
+
+--------------------------------------------------------------------------------------------------------------------
+https://www.homenethowto.com/advanced-topics/ports-tcp-and-udp-in-depth/
+
+Each UDP or TCP message has a destination port, meaning which service or program that the message is intended for. 
+Maybe the message is intended for a Web Server listening on port 80/TCP, or perhaps a DNS Server listening on port 
+53/UDP.
+
+But all UDP and TCP messages also have a source port. The source port is most often randomly picked by the computer.
+The source port can be used by routers and firewalls in the network to distinguish between different communication 
+flows or sessions since each session will have a different random source port associated with it.
+
+For example, let’s say that you open two web browsers at the same time on your computer. Then you browse 
+simultaneously from both web browser to the same web page on the Internet. You will now have two sessions from your 
+computer’s IP address to the IP address of the web server. Both sessions are also going to the same destination 
+Port, 80/TCP.
+There will be two replies coming back from the Web server, one reply for each web browser on your computer. But how 
+will your computer know which browser that should receive which reply?
+The answer is in the random "source port" that the computer picks for each traffic flow.
+
+---------------------------------------------------------------------------------------------------------------------
+https://www.homenethowto.com/ports-and-nat/udp-and-tcp-two-ways-of-sending-traffic/
+
+But different programs and services have very different requirements regarding how they prefer that traffic should 
+be sent over the network. To some programs, it is extremely important that not a single data packet is lost, and 
+that no packets are received in the wrong order. Other programs might not care if some errors or packet losses 
+occur. Instead, they might prefer that the traffic is just simply being sent as quickly as possible.
+
+This is where TCP and UDP come into play. They are Transport Protocols that govern how traffic is sent over the network.
+
+UDP:
+http://www.homenethowto.com/wp-content/uploads/table-tcp-udp.png
+
+TCP:
+https://www.youtube.com/watch?v=x5l5Z1j62iQ
