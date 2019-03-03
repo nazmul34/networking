@@ -95,6 +95,7 @@ occur. Instead, they might prefer that the traffic is just simply being sent as 
 This is where TCP and UDP come into play. They are Transport Protocols that govern how traffic is sent over the network.
 
 UDP:
+https://www.youtube.com/watch?v=4AaB-pWTiHY&t=237s
 http://www.homenethowto.com/wp-content/uploads/table-tcp-udp.png
 
 TCP:
